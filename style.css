@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap");
+body header #new-task-form #new-task-input {
+  color: #6B7280;
+}
+
+body header h1, body header #new-task-form #new-task-input, body header #new-task-form #new-task-submit, body header #new-task-form #new-task-submit:hover, body header #new-task-form #new-task-submit:active, body main .task-list #tasks .task .content .text, body main .task-list #tasks .task-actions button {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: #374151;
+  color: #fff;
+}
+
+body input, body button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+body header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6B7280;
+}
+
+body header #new-task-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header #new-task-form #new-task-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  background: #1F2937;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #eee;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  font-size: 1.25rem;
+}
+
+body header #new-task-form #new-task-submit {
+  color: #EC4899;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-image: -webkit-gradient(linear, left top, right top, from(#EC4899), to(#8B5Cf6));
+  background-image: linear-gradient(to right, #EC4899, #8B5Cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body header #new-task-form #new-task-submit:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+body header #new-task-form #new-task-submit:active {
+  opacity: 0.5;
+}
+
+body main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+
+body main .task-list {
+  padding: 1rem;
+}
+
+body main .task-list h2 {
+  font-size: 1.5rem;
+  color: #6B7280;
+  margin-bottom: 1rem;
+}
+
+body main .task-list #tasks .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #111827;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+body main .task-list #tasks .task .content .text {
+  color: #eee;
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+}
+
+body main .task-list #tasks .task .content .text:not(:-moz-read-only) {
+  color: #EC4899;
+}
+
+body main .task-list #tasks .task .content .text:not(:read-only) {
+  color: #EC4899;
+}
+
+body main .task-list #tasks .task-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+body main .task-list #tasks .task-actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+body main .task-list #tasks .task-actions button.edit {
+  background-image: -webkit-gradient(linear, left top, right top, from(#EC4899), to(#8B5Cf6));
+  background-image: linear-gradient(to right, #EC4899, #8B5Cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main .task-list #tasks .task-actions button.delete {
+  color: crimson;
+}
+/*# sourceMappingURL=style.css.map */

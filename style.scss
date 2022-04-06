@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
+@import 'variables';
+@import 'extendedClasses';
+@import 'mixin';
+// universal codes 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+body{
+    input, button{
+        @include input-properties;
+     }
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: $primary-color;
+    color: #fff;
+    header{
+        padding: 2rem 1rem;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        h1{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: $grey-color;
+            @extend %transition;
+        }
+        #new-task-form{
+            display: flex;
+            
+            #new-task-input{
+                flex: 1 1 0%;
+                background: $secondary-color;
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-right: 1rem;
+                color: $light-color;
+                transition: 0.5s all;
+                font-size: 1.25rem;
+                @extend %new-task-input-placeholders;
+                @extend %transition;
+            }
+            #new-task-submit{
+                color: $pink-color;
+                font-size: 1.25rem;
+                font-weight: 600;
+                background-image: linear-gradient(to right, $pink-color, $purple-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @extend %transition;
+                &:hover{
+                    opacity: 0.7;
+                    @extend %transition;
+                    cursor: pointer;
+                }
+                &:active{
+                    opacity: 0.5;
+                    @extend %transition;
+                }
+            }
+        }
+    }
+    main{
+        padding: 2rem 1rem;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        flex: 1 1 0%;
+        .task-list{
+            padding: 1rem;
+            h2{
+                font-size: 1.5rem;
+                color: $grey-color;
+                margin-bottom: 1rem;
+            }
+            #tasks{
+                .task{
+                    display: flex;
+                justify-content: space-between;
+                background: $other-color;
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+                    .content{
+                        .text{
+                            color: $light-color;
+                            font-size: 1.125rem;
+                            width: 100%;
+                            display: block;
+                            @extend %transition;
+                            &:not(:read-only){
+                                color:$pink-color;
+                            }
+                        }
+                    }
+                }
+                .task-actions{
+                    display: flex;
+                    margin: 0 -0.5rem;
+                    button{
+                        cursor: pointer;
+                        margin: 0 0.5rem;
+                        font-size: 1.125rem;
+                        text-transform: uppercase;
+                        @extend %transition;
+                    }
+                    button.edit{
+                        background-image: linear-gradient(to right, $pink-color, $purple-color);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color:transparent;
+                    }
+                    button.delete{
+                        color:crimson;
+
+                    }
+                }
+            }
+        }
+
+    }
+}
